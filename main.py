@@ -1,19 +1,19 @@
-# Add this function to your game code
+# a213_pw_analyzer.py
+import time
+import pwalgorithms as pwa
 
-# manages the leaderboard for top 5 scorers
-def manage_leaderboard():
+password = input("Enter password:")
 
-  global score
-  global spot
+print("Analyzing a one-word password ...")
+time_start = time.time()
 
-  # get the names and scores from the leaderboard file
-  leader_names_list = lb.get_names(leaderboard_file_name)
-  leader_scores_list = lb.get_scores(leaderboard_file_name)
+# attempt to find password
+found, num_guesses = pwa.one_word(password)
+time_end = time.time()
 
-  # show the leaderboard with or without the current player
-  if (len(leader_scores_list) < 5 or score >= leader_scores_list[4]):
-    lb.update_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list, player_name, score)
-    lb.draw_leaderboard(True, leader_names_list, leader_scores_list, spot, score)
-
-  else:
-    lb.draw_leaderboard(False, leader_names_list, leader_scores_list, spot, score)
+# report results
+if (found):
+  print(password, "found in", num_guesses, "guesses")
+else: 
+  print(password, "NOT found in", num_guesses, "guesses!")
+print("Time:", format((time_end-time_start), ".8f"))
