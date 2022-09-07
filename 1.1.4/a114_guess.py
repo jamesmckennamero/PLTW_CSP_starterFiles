@@ -9,6 +9,8 @@ painter.pensize(2)
 
 spiral_space = 0
 
+f = 1
+
 while (spiral_space < 80): 
   painter.goto(0,0)
   painter.right(20)
@@ -24,3 +26,4 @@ while (spiral_space < 80):
 
 wn = trtl.Screen()
 wn.mainloop()
+#TEST
