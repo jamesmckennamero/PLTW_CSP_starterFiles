@@ -6,7 +6,7 @@ painter = trtl.Turtle()
 painter.speed(0)
 
 # stem
-painter.color("green")
+painter.color("red")
 painter.pensize(15)
 painter.goto(0, -150)
 painter.setheading(90)

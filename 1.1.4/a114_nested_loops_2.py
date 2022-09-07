@@ -13,7 +13,19 @@ while (x < 200):
   painter.goto(x,y)
   painter.color("red")
   painter.stamp()
-
+  while painter.ycor() < 100:
+    if painter.pencolor() == red:
+      painter.fillcolor(green)
+      painter.color(green)
+    else:
+      painter.fillcolor(red)
+      painter.color(red)
+    painter.right(90)
+    painter.forward(2 * space + 10) # experiment
+    painter.begin_fill()
+    painter.circle(3)
+    painter.end_fill()
+    space = space + 1
 
 wn = trtl.Screen()
 wn.mainloop()

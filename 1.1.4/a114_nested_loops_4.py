@@ -23,7 +23,6 @@ while (x < 0):
     y = y + move_y
     painter.goto(x,y)
   move_y = 1
-
-
+color1
 wn = trtl.Screen()
 wn.mainloop()

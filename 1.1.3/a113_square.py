@@ -4,6 +4,9 @@ import turtle as trtl
 
 painter = trtl.Turtle()
 
+for square in range(4):
+    painter.forward(40)
+    painter.right(90)
 # Your code here
 
 
