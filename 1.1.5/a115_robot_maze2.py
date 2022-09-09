@@ -37,21 +37,34 @@ robot.speed(2)
 robot.showturtle()
 
 #---- TODO: change maze here
-wn.bgpic("1.1.5/maze1.png") # other file names should be maze2.png, maze3.png
+wn.bgpic("1.1.5/maze2.png") # other file names should be maze2.png, maze3.png
 
 #---- TODO: begin robot movement here
 # move robot forward with move()
 # turn robot left with turn_left()
 # sample while loop:
 
-for forward in range(4):
+for forward in range(3):
   move()
 
 for turn in range(3):
   turn_left()
 
-for forward in range(4):
+for forward in range(2):
   move()
+
+robot.goto(startx, starty)
+
+for forward in range(3):
+  move()
+
+turn_left()
+
+for forward in range(3):
+  move()
+
+turn_left()
+move()
 
 #---- end robot movement 
 
