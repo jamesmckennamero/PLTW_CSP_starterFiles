@@ -55,15 +55,11 @@ for forward in range(2):
 
 robot.goto(startx, starty)
 
-for forward in range(3):
-  move()
+for line in range(2):
+  for forward in range(3):
+    move()
+  turn_left()
 
-turn_left()
-
-for forward in range(3):
-  move()
-
-turn_left()
 move()
 
 #---- end robot movement 
