@@ -22,6 +22,7 @@ moving = 40
 angle = 45
 heading = angle
 
+
 # directs where the turtle must go
 for t in my_turtles:
   t.penup()
