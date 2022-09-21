@@ -6,8 +6,8 @@ import turtle as trtl
 my_turtles = []
 
 # use interesting shapes and colors
-turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
-turtle_colors = ["red", "blue", "green", "orange", "purple", "gold"]
+turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic", "arrow", "turtle", "circle", "square", "triangle", "classic"]
+turtle_colors = ["red", "blue", "green", "orange", "purple", "gold", "red", "blue", "green", "orange", "purple", "gold"]
 
 for s in turtle_shapes:
   t = trtl.Turtle(shape=s)
@@ -18,20 +18,24 @@ for s in turtle_shapes:
 # sets turtle to origin point
 startx = 0
 starty = 0
-
-heading = 90
+moving = 40
+angle = 45
+heading = angle
 
 # directs where the turtle must go
 for t in my_turtles:
+  t.penup()
   t.goto(startx, starty)
-
+  t.pendown()
   t.right(heading) 
-  t.forward(50)
-  
+  t.forward(moving)
+ 
 
 #	modifies starting point
   startx = t.xcor()
   starty = t.ycor()
+  moving = moving + (15)
+  angle = angle + (20)
   heading=(heading+45)
 
 wn = trtl.Screen()
