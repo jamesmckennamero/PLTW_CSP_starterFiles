@@ -22,7 +22,10 @@ painter.forward(600)
 time = 10
 frames = 3
 
+for t in time: 
+    while frames > (0):
 
+        frames = frames - (1)
 
 
 
