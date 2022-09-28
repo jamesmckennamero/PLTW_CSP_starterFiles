@@ -2,15 +2,17 @@
 import turtle as trtl
 
 #creates lists
-turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
-colors = ["red", "blue", "green", "orange", "purple", "gold"]
+turtle_shapes_main = ["arrow", "turtle", "triangle", "classic"]
+colors_main = ["red", "green", "orange", "brown"]
+turtle_shapes = []
+colors = []
 
 painter = trtl.Turtle()
 painter.speed(100)
-painter.penup()
-painter.goto(300,-40)
 
-#creates car shape
+  #redraws car shape
+painter.penup()
+painter.goto(280,-40)
 painter.pendown()
 painter.pensize(15)
 painter.left(90)
@@ -18,15 +20,72 @@ painter.circle(300,180)
 painter.left(90)
 painter.forward(600)
 
+#draws left square
+painter.penup()
+painter.goto(-250,-50)
+painter.pendown()
+painter.forward(150)
+painter.right(90)
+painter.forward(150)
+painter.right(90)
+painter.forward(150)
+painter.right(90)
+painter.forward(150)
+painter.right(90)
+
+#draws right square
+painter.penup()
+painter.goto(50,-50)
+painter.pendown()
+painter.forward(150)
+painter.right(90)
+painter.forward(150)
+painter.right(90)
+painter.forward(150)
+painter.right(90)
+painter.forward(150)
+painter.right(90)
+
+
+#draws ground
+painter.penup()
+painter.goto(-625,-350)
+painter.right(90)
+painter.pendown()
+painter.circle(150,-180)
+painter.left(180)
+painter.circle(150,-180)
+painter.left(180)
+painter.circle(150,-180)
+painter.left(180)
+painter.circle(150,-180)
+painter.left(180)
+painter.circle(150,-180)
+painter.left(180)
+
 #defines amount for time and frame
 time = 10
 frames = 3
 
-for t in time: 
+'''
+#loop for animation
+for t in range(time): 
+    frames = 3
     while frames > (0):
-
+        #redraws car shape
+        painter.penup()
+        painter.goto(300,-40)
+        painter.pendown()
+        painter.pensize(15)
+        painter.left(90)
+        painter.circle(300,180)
+        painter.left(90)
+        painter.forward(600)
+        
         frames = frames - (1)
 
+        trtl.clearscreen()
+'''
 
 
 
