@@ -1,13 +1,16 @@
 #imports turtle
 import turtle as trtl
-
+painter = trtl.Turtle()
 #creates lists
 
-
-colors_main = ['red', 'green', 'brown', 'gray']
+red = "red"
+green = "green"
+black = "black"
+colors_main = "red", "green", "black"
 colors = []
 
-painter = trtl.Turtle()
+
+print(colors)
 
 painter.speed(100)
 
@@ -41,7 +44,6 @@ painter.right(90)
 '''
 
 
-
 #defines amount for time and frame
 time = 10
 frames = 3
@@ -50,12 +52,14 @@ frames = 3
 for t in range(time): 
     frames = 3
     while frames > (0):
-        colors.append(colors_main)
-        thecolor = colors.
+        colors.append(red)
+        colors.append(green)
+        colors.append(black)
+        currentcolor = colors
         painter.reset()
         painter.speed(100)
         #redraws car shape
-        painter.color(thecolor)
+        painter.pencolor((currentcolor))
         painter.penup()
         painter.goto(300,-40)
         painter.pendown()
